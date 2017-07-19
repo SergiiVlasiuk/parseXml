@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workflow>
+    <call name="api1">
+        <repeat>100</repeat>
+        <delay>60</delay>
+        <call name="apicallafterapi1">
+            <fields>c_id</fields>
+            <repeat>10</repeat>
+            <delay>2</delay>
+        </call>
+    </call>
+
+    <call name="api2">
+        <repeat>1000</repeat>
+        <delay>5</delay>
+    </call>
+    <call name="api3">
+        <repeat>1000</repeat>
+    </call>
+</workflow>
