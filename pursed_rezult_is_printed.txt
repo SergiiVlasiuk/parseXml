@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<workflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="Workflow.xml">
+    <call name="api1">
+        <repeat>100</repeat>
+        <delay>60</delay>
+        <call name="apicallafterapi1">
+            <repeat>10</repeat>
+            <delay>2</delay>
+            <fields>c_id</fields>
+        </call>
+    </call>
+    <call name="api2">
+        <repeat>1000</repeat>
+        <delay>5</delay>
+    </call>
+    <call name="api3">
+        <repeat>1000</repeat>
+    </call>
+</workflow>
